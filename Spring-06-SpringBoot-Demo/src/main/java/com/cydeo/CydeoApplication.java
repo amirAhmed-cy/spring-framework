@@ -13,6 +13,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class CydeoApplication {
 
 	public static void main(String[] args) {
+
 		Comment comment = new Comment();
 		comment.setAuthor("Johnson");
 		comment.setText("Spring Framework");
@@ -21,7 +22,10 @@ public class CydeoApplication {
 
 		CommentService cs = context.getBean(CommentService.class);
 		cs.publishComment(comment);
+
+
 	}
+
 
 
 }

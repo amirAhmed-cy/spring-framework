@@ -12,7 +12,7 @@ public class CommentService {
     private final CommentRepository commentRepository;
     private final CommentNotificationProxy commentNotificationProxy;
 
-    public CommentService(CommentRepository commentRepository, @Qualifier("Email") CommentNotificationProxy commentNotificationProxy) {
+    public CommentService(CommentRepository commentRepository, @Qualifier("PUSH") CommentNotificationProxy commentNotificationProxy) {
         this.commentRepository = commentRepository;
         this.commentNotificationProxy = commentNotificationProxy;
     }
@@ -21,6 +21,7 @@ public class CommentService {
         commentRepository.storeComment(comment);
         commentNotificationProxy.sendComment(comment);
     }
+
 
 
 }
