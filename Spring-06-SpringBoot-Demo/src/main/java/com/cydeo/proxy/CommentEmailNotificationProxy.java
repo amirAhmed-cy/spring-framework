@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 //@Primary
-@Qualifier("Email")
+@Qualifier("EMAIL")
 public class CommentEmailNotificationProxy implements CommentNotificationProxy{
 
     @Override

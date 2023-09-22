@@ -5,8 +5,5 @@ import org.springframework.stereotype.Component;
 
 @Component
 public interface CommentRepository {
-
     void storeComment(Comment comment);
-
-
 }
